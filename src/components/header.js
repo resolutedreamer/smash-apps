@@ -1,13 +1,11 @@
 import React from 'react';
 
-class Header extends React.Component {
+export default class Header extends React.Component {
   render () {
     return (
       <div>
-        TEST
+        Tier List Generator
       </div>
     )
   }
 }
-
-export default Header;
