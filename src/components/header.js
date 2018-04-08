@@ -4,7 +4,7 @@ export default class Header extends React.Component {
   render () {
     return (
       <div>
-        Tier List Generator
+		<h1>TIER LIST MAKER - <span> Woo</span></h1>
       </div>
     )
   }
