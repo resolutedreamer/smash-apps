@@ -7,10 +7,11 @@
   "description": "Create a tier list from a generic data source",
   "private": true,
   "dependencies": {
+    "create-react-app": "^1.5.2",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
-    "react-scripts": "1.1.1",
-    "create-react-app": "^1.5.2"
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
