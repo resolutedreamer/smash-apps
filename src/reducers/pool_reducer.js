@@ -1,4 +1,4 @@
-import RECEIVE_POOL_ITEM from '../actions/pool_actions';
+import { RECEIVE_POOL_ITEM } from '../actions/pool_actions';
 
 const poolReducer = (state = [], action) => {
   Object.freeze(state);
@@ -11,3 +11,5 @@ const poolReducer = (state = [], action) => {
       return state;
   }
 }
+
+export default poolReducer;

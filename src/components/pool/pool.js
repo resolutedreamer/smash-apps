@@ -51,10 +51,9 @@ export default class Pool extends React.Component {
   }
 
   handleSubmit(e) {
-    alert(`name: ${this.state.itemName}, url: ${this.state.itemURL}`);
-
     e.preventDefault();
-    
+    let item = Object.assign({}, this.state);
+    this.props.addItemToPool(item);
   }
 
   render() {
