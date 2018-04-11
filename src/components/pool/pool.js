@@ -1,5 +1,6 @@
 import React from 'react';
 import './pool.css';
+import addItemModal from './add_item_modal';
 
 export default class Pool extends React.Component {
 
@@ -25,25 +26,6 @@ export default class Pool extends React.Component {
     modal.style.display = 'block';
   }
 
-  addItemModal() {
-    return (
-      <div id='addItemModal' className='modal'>
-        <form className='modal-content' onSubmit={this.handleSubmit}>
-          Item name:
-          <input type='text' 
-            value={this.state.itemName} 
-            onChange={this.handleChange('itemName')} 
-          />
-          Image URL:
-          <input type='text' 
-            value={this.state.itemURL} onChange={this.handleChange('itemURL')}
-          />
-          <input type='submit' />
-        </form>
-      </div>
-    )
-  }
-
   handleChange(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -54,6 +36,11 @@ export default class Pool extends React.Component {
     e.preventDefault();
     let item = Object.assign({}, this.state);
     this.props.addItemToPool(item);
+    this.setState({
+      itemName: '',
+      itemURL: '',
+      itemDescription: ''
+    });
   }
 
   render() {
@@ -62,7 +49,7 @@ export default class Pool extends React.Component {
         <button onClick={this.showModal}>
           Add Item
         </button>
-        {this.addItemModal()}
+        <addItemModal />
       </div>
     )
   }
